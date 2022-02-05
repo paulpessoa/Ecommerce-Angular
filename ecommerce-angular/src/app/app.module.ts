@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { MatCardModule } from '@angular/material/card';
+import { HomeComponent } from './views/home/home.component';
 
 
 @NgModule({
@@ -16,14 +18,16 @@ import { NavComponent } from './components/template/nav/nav.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
