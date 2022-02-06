@@ -9,6 +9,7 @@ import { Film } from '../list-films/film.model';
 export class CheckoutService {
   public baseUrl: string = 'http://localhost:3001';
   public listFilms: Film[] = [];
+  public totalPrice: number = 0;
   private _priceHandler: number = 0;
   
 
@@ -25,5 +26,16 @@ export class CheckoutService {
 
   getListFilms(): Observable<Film[]> {
     return this.httpClient.get<Film[]>(this.baseUrl+'/films');
+  }
+
+  selectFilm() {
+    this.totalPrice += this.getPrice();
+  }
+
+  unselectFilm () {
+    this.totalPrice -= this.getPrice();
+    if (this.totalPrice < 0) {
+      this.totalPrice = 0; 
+    }
   }
 }
