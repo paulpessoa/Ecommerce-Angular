@@ -9,7 +9,17 @@ import { Film } from '../list-films/film.model';
 export class CheckoutService {
   public baseUrl: string = 'http://localhost:3001';
   public listFilms: Film[] = [];
+  private _priceHandler: number = 0;
   
+
+  getPrice(): number {
+    return this._priceHandler;
+  }
+
+  setPrice(value: number) {
+    this._priceHandler = value;
+  }
+
   constructor(private httpClient: HttpClient) {
   }
 
