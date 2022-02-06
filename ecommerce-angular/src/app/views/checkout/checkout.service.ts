@@ -29,13 +29,17 @@ export class CheckoutService {
   }
 
   selectFilm() {
-    this.totalPrice += this.getPrice();
-  }
+    setTimeout(() =>{
+      this.totalPrice += this.getPrice();
+      console.log(this.totalPrice)
+      }, 1);
+    }
 
   unselectFilm () {
     this.totalPrice -= this.getPrice();
     if (this.totalPrice < 0) {
       this.totalPrice = 0; 
+      console.log(this.totalPrice)
     }
   }
 }
