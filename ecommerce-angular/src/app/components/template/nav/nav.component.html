@@ -5,7 +5,7 @@
             <i class="material-icons">home</i>
             Home
         </a>
-        <a mat-list-item href="">
+        <a mat-list-item routerLink="/list-films">
             <i class="material-icons">theaters</i>
             List Films
         </a>
@@ -20,6 +20,7 @@
     <button mat-icon-button (click)="sidenav.toggle()" class="mat-nav-button">
         <i class="material-icons">menu</i>
     </button>
+
       <router-outlet></router-outlet>
   </mat-sidenav-content>
 

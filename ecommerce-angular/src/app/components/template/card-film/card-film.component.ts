@@ -10,7 +10,7 @@ import { Film } from 'src/app/views/list-films/film.model';
 export class CardFilmComponent implements OnInit {
   listFilms: Film[] = [];
   
-  constructor(private checkoutService:CheckoutService) { }
+  constructor(private checkoutService: CheckoutService) { }
 
   ngOnInit(): void {
     this.checkoutService.getListFilms().subscribe((film) => {
