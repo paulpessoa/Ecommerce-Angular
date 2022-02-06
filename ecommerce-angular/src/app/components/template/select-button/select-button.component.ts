@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheckoutService } from 'src/app/views/checkout/checkout.service';
 
 @Component({
   selector: 'app-select-button',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-button.component.css']
 })
 export class SelectButtonComponent implements OnInit {
+  disabled = false;
 
-  constructor() { }
+  constructor(private checkoutService: CheckoutService) { }
 
   ngOnInit(): void {
   }
 
+  selectFilm(){
+    this.disabled = true;
+    this.checkoutService.selectFilm();
+  }
+
+  unselectFilm(){
+    this.disabled = false;
+    this.checkoutService.unselectFilm();
+  }
+
+
+
 }
+
+

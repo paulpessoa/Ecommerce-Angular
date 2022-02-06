@@ -1,1 +1,2 @@
-<p>select-button works!</p>
+<button class="selected" mat-flat-button color="primary" [disabled]="disabled === true" (click)="selectFilm()">Select</button>
+<button mat-flat-button color="warn" [disabled]="disabled === false" (click)="unselectFilm()">Unselect</button>
