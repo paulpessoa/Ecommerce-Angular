@@ -5,7 +5,7 @@ import { CheckoutService } from './checkout.service';
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
-})
+});
 export class CheckoutComponent implements OnInit {
   listSelectedFilms: Film[] = [];
   totalPrice|: number;
