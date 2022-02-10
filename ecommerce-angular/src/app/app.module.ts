@@ -34,7 +34,7 @@ import { CheckoutComponent } from './views/checkout/checkout.component';
     CardFilmComponent,
     ListFilmsComponent,
     SelectButtonComponent,
-    CheckoutComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

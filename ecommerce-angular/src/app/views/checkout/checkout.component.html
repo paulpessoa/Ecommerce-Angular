@@ -1,22 +1,26 @@
-<mat-card class="mat-card-main mat-elevation-z4">
+<h2>oi</h2>
+
+<!--
+    
+    
+    <mat-card class="mat-card-main mat-elevation-z4">
     <mat-card-title>
         <h2>Checkout</h2>
     </mat-card-title>
     <mat-card>
         <h2>{{listSelectedFilms.length}} selected items</h2>
         <h3>Total cost: {{totalPrice}}</h3>
-        <mat-card class="mat-card-film"  [card.isValid]="disabled === true"
-        *ngFor="let film of listSelectedFilms" >
+        <mat-card class="mat-card-film"  [card.isValid]="disabled === true" *ngFor="let film of listSelectedFilms">
             <mat-card-content class="mat-card-content">
                 <div>
                     <mat-card-title>
-                        <h2>{{filme.name}}</h2>
+                        <h2>{{film.name}}</h2>
                     </mat-card-title>
                     <mat-card-subtitle>
-                        {{filme.price}}
+                        {{film.price}}
                     </mat-card-subtitle>
                 </div>
-                <button mat-flat-button color="warn" (click)="exclue(film)">
+                <button mat-flat-button color="warn" (click)="exclude(film)">
                     Exclude
                 </button>
             </mat-card-content>
@@ -35,7 +39,7 @@
                     <mat-label>
                         what's your name
                     </mat-label>
-                    <input matInput placeholder="Your name" required name="name" [disabled]="disabled === true" type="text">
+                    <input matInput placeholder="Your name" required name="name" [disabled]="disabled === true">
                     <i class="material-icons" matSuffix required>person</i>
                     <mat-hint>Ex. Paul, Ismaela...</mat-hint>
                 </mat-form-field>
@@ -43,3 +47,12 @@
         </form>
     </mat-card>
 </mat-card>
+    
+    
+    
+    
+    
+    
+    
+    
+-->
